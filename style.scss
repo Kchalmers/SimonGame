@@ -1,0 +1,54 @@
+@import "variables";
+
+header {
+  font-size: 3em;
+  margin: 0.5em;
+}
+.red {
+  background-color: red;
+  border-radius: 0 20em 0 0 ;
+  &:active {
+    background-color: lighten(red, 15%);
+  }
+}
+.green {
+  background-color: green;
+  border-radius: 20em 0 0 0;
+  &:active {
+    background-color: lighten(green, 10%);
+  }
+}
+.yellow {
+  background-color: yellow;
+  border-radius: 0 0 0 20em;
+  &:active {
+    background-color: lighten(yellow, 25%);
+  }
+}
+.blue {
+  background-color: blue;
+  border-radius: 0 0 20em 0 ;
+  &:active {
+    background-color: lighten(blue, 15%);
+  }
+}
+.game {
+  width: $game-width;
+  height:$game-height;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 20em;
+  > button {
+    width: $gameBtn-width;
+    height:$gameBtn-height;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+  }
+}
+.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+  position: absolute;
+}
