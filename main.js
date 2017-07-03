@@ -27,6 +27,7 @@ function Game(){
         gameButton.attr("disabled", false);
     };
     this.showPattern = function () {
+        document.getElementById(pattern[currentPatternColor]).play();
         $(`.${pattern[currentPatternColor]}`).animate({
             opacity: 0.2
         }, 300).animate({
@@ -71,6 +72,7 @@ function Game(){
     };
     this.playerClick = function () {
         if(started) {
+            document.getElementById(this.classList["0"]).play();
             if (this.classList["0"] === pattern[currentColor]) {
                 self.victoryCheck();
             }
@@ -79,6 +81,8 @@ function Game(){
                 self.reset();
             }
             else if(this.classList["0"] !== pattern[currentColor]){
+                $(".status").append("Incorrect!");
+                setTimeout(self.clearStatus, 1000);
                 self.playPattern();
             }
         }
