@@ -1,0 +1,48 @@
+header {
+  font-size: 3em;
+  margin: 0.5em; }
+
+.red {
+  background-color: red;
+  border-radius: 0 20em 0 0; }
+  .red:active {
+    background-color: #ff4d4d; }
+
+.green {
+  background-color: green;
+  border-radius: 20em 0 0 0; }
+  .green:active {
+    background-color: #00b300; }
+
+.yellow {
+  background-color: yellow;
+  border-radius: 0 0 0 20em; }
+  .yellow:active {
+    background-color: #ffff80; }
+
+.blue {
+  background-color: blue;
+  border-radius: 0 0 20em 0; }
+  .blue:active {
+    background-color: #4d4dff; }
+
+.game {
+  width: 50vh;
+  height: 50vh;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 20em; }
+  .game > button {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    cursor: pointer;
+    outline: none; }
+
+.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+  position: absolute; }
+
+/*# sourceMappingURL=style.css.map */
